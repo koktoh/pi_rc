@@ -1,0 +1,14 @@
+[Unit]
+Description=Camera streaming service
+After=network.target
+
+[Service]
+User=<Raspberry Pi のユーザー名>
+Group=<Raspberry Pi のユーザー名>
+Type=simple
+Restart=always
+WorkingDirectory=/usr/local/bin/camera_streaming
+ExecStart=/usr/bin/python3 streaming.py
+
+[Install]
+WantedBy=multi-user.target

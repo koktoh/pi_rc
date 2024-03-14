@@ -1,0 +1,13 @@
+[Unit]
+Description=MJPG-Streamer service
+After=network.target
+
+[Service]
+Type=simple
+KillMode=process
+Restart=always
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/local/bin/start_mjpg_streamer.sh
+
+[Install]
+WantedBy=multi-user.target
